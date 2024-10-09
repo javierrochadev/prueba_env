@@ -6,10 +6,13 @@ on:
 jobs:
   show_message:
     runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
     steps:
       - name: Mostrar un mensaje
         run: | 
           echo "El entorno seleccionado es: ${{ github.event.inputs.environment }}"
       - name: Traerme
         run: | 
-           ${{ secrets }}
+           echo ${{ secrets.API_URL }}
+           echo ${{ secrets.LOG_LEVEL }}
+           
