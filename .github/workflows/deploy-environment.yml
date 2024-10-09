@@ -1,0 +1,15 @@
+name: Workflow de deploy
+
+on:
+  workflow_call:
+
+jobs:
+  show_message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar un mensaje
+        run: | 
+          echo "El entorno seleccionado es: ${{ github.event.inputs.environment }}"
+      - name: Traerme
+        run: | 
+           hola estas en el deploy
