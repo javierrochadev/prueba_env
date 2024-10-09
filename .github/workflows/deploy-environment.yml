@@ -13,6 +13,6 @@ jobs:
           echo "El entorno seleccionado es: ${{ github.event.inputs.environment }}"
       - name: Traerme
         run: | 
-           echo ${{ secrets.API_URL }}
-           echo ${{ secrets.LOG_LEVEL }}
+           echo ${{ variables.API_URL }}
+           echo ${{ variables.LOG_LEVEL }}
            
