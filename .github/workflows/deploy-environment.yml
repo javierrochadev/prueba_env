@@ -12,4 +12,4 @@ jobs:
           echo "El entorno seleccionado es: ${{ github.event.inputs.environment }}"
       - name: Traerme
         run: | 
-           hola estas en el deploy
+           ${{ env.API_URL }}
